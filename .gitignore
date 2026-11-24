@@ -1,0 +1,9 @@
+# Pliki wykonywalne i skompilowane
+*.exe
+*.out
+*.app
+*.o
+*.obj
+
+# Ustawienia VS Code
+.vscode/
