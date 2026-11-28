@@ -1,14 +1,14 @@
-#include "Zawodnik.h"
+#include "zawodnik.h"
 #include <iostream>
-
+using namespace std;
 Zawodnik::Zawodnik() : imie(""), nazwisko(""), wiek(0), numer(0), ocena(0){}
 
-Zawodnik::Zawodnik(const std::string& imie, const std::string& nazwisko,
+Zawodnik::Zawodnik(const string& imie, const string& nazwisko,
                    int wiek, int numer, int ocena)
     : imie(imie), nazwisko(nazwisko), wiek(wiek), numer(numer), ocena(ocena){}
 
-std::string Zawodnik::getImie() const { return imie; }
-std::string Zawodnik::getNazwisko() const { return nazwisko; }
+string Zawodnik::getImie() const { return imie; }
+string Zawodnik::getNazwisko() const { return nazwisko; }
 int Zawodnik::getWiek() const { return wiek; }
 int Zawodnik::getNumer() const { return numer; }
 int Zawodnik::getOcena() const { return ocena; }
@@ -22,5 +22,9 @@ double Zawodnik::obliczWartoscRynkowa() const {
 }
 
 void Zawodnik::wypisz() const {
-    std::cout << "#" << numer << " " << imie << " " << nazwisko << ", wiek: " << wiek << ", ocena: " << ocena << ", wartosc: " << obliczWartoscRynkowa() << " EUR\n";
+    cout << "#" << numer << " " << imie << " " << nazwisko << ", wiek: " << wiek << ", ocena: " << ocena << ", wartosc: " << obliczWartoscRynkowa() << " EUR\n";
+}
+
+double Zawodnik::obliczOceneMeczowa() const {
+    return ocena;
 }

@@ -1,22 +1,24 @@
-#pragma once
-#include <string>
+#ifndef ZAWODNIK_H
+#define ZAWODNIK_H
 
+#include <string>
+using namespace std;
 class Zawodnik{
     private:
-        std::string imie;
-        std::string nazwisko;
+        string imie;
+        string nazwisko;
         int wiek;
         int numer;
         int ocena;
 
     public:
         Zawodnik();
-        Zawodnik(const std::string& imie, const std::string& nazwisko,
+        Zawodnik(const string& imie, const string& nazwisko,
                 int wiek, int numer, int ocena);
         virtual ~Zawodnik() = default;
 
-        std::string getImie() const;
-        std::string getNazwisko() const;
+        string getImie() const;
+        string getNazwisko() const;
         int getWiek() const;
         int getNumer() const;
         int getOcena() const;
@@ -27,4 +29,7 @@ class Zawodnik{
 
         virtual double obliczWartoscRynkowa() const;
         virtual void wypisz() const;
+        virtual double obliczOceneMeczowa() const;
 };  
+
+#endif
